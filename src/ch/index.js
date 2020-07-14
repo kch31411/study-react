@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function FunctionComponent() {
-  return <div>CH</div>;
+  return <div>CH-test</div>;
 }
