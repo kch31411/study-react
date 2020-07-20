@@ -34,7 +34,7 @@ export default function App() {
         <Switch>
           <Route path="/ch">
             <CH value={1} color="red" />
-            <CH value={2} />
+            <CH value={2} showBtn={false} />
             <CH value="3" />
           </Route>
           <Route path="/ey">
