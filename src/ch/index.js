@@ -1,29 +1,21 @@
 import React from "react";
 
-export default function FunctionComponent() {
+function FunctionComponent({ color, value }) {
   return (
-    <div>
-      <h2 id="number">0</h2>
+    <>
+      <h2 className="number" style={{ color: color }}>
+        {value}
+      </h2>
       <div>
         <button id="increase">+1</button>
         <button id="decrease">-1</button>
       </div>
-    </div>
+    </>
   );
 }
 
-const number = document.getElementById("number");
-const increase = document.getElementById("increase");
-const decrease = document.getElementById("decrease");
-
-increase.onclick = () => {
-  const current = parseInt(number.innerText, 10);
-  number.innerText = current + 1;
-  console.log("increase 가 클릭됨");
+FunctionComponent.defaultProps = {
+  color: "blue"
 };
 
-decrease.onclick = () => {
-  const current = parseInt(number.innerText, 10);
-  number.innerText = current - 1;
-  console.log("decrease 가 클릭됨");
-};
+export default FunctionComponent;

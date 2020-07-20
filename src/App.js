@@ -33,7 +33,9 @@ export default function App() {
         </nav>
         <Switch>
           <Route path="/ch">
-            <CH />
+            <CH value={1} color="red" />
+            <CH value={2} />
+            <CH value="3" />
           </Route>
           <Route path="/ey">
             <EY />
