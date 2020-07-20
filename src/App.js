@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CH from "./ch";
+import InputSample from "./ch/input";
 import EY from "./ey";
 import GW from "./gw";
 import HS from "./hs";
@@ -33,6 +34,7 @@ export default function App() {
         </nav>
         <Switch>
           <Route path="/ch">
+            <InputSample />
             <CH value={1} color="red" />
             <CH value={2} showBtn={false} />
             <CH value="3" />
